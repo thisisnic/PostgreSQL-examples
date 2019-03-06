@@ -38,3 +38,7 @@ To break it down, this is what happens:
 2. It then appends (using `UNION ALL`) subsequent results to the table.  To calculate these subsequent results, the query checks that the `WHERE` clause is TRUE and then takes the previous values (so in the case of row 2, these would be 1 and 0, our starting values), and then appends `n + 1` and `m + n`, so 2 and 1.  
 
 3. As long as the `WHERE` clause remains TRUE, step 2 is repeated until `n+1<=100` is FALSE.
+
+## Usage
+
+Recursive CTEs can be used in hierarchical data where we wish to return, for example, of children of a certain entity.
